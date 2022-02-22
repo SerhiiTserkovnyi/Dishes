@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dishes Shop</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="header__container">
+        <div class="header__container_logo">Dishes Shop</div>
+    </div>
+    <div class="warper__container" id="tables">
+        <div class="table" id="table">
+            <input type="text" onkeyup="mySearch()" name="search" id="search" placeholder="Search product">
+            <div class="warper__container_text">Product</div>
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable('Name')" style="cursor:pointer">Name<span></span></th>
+                            <th onclick="sortTable('Price')" style="cursor:pointer">Price<span class="icon"></span></th>
+                            <th onclick="sortTable('Count')" style="cursor:pointer">Count<span id="icon"></span></th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabled"> </tbody>
+
+
+                </table>
+
+            </div>
+            <button class="open-popup">Add Products</button>
+
+        </div>
+        <div id=modal>
+            <div class="popup__bg">
+                <form class="popup">
+                    <img src="images/close.svg" class="close-popup">
+                    <textarea id="textToJson" name="textarea" rows="10" cols="50" placeholder="Paste you product"></textarea>
+                    <button id="upload" class="upload">Upload</button>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js" defer></script>
+    <script src="js/showModal.js"></script>
+</body>
+
+</html>

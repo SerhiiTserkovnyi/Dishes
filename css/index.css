@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+.header__container {
+    display: flex;
+}
+
+.header__container_logo {
+    margin: auto;
+    margin-top: 20px;
+    font-size: 3em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    border: 1px solid red;
+    padding: 10px 10px;
+}
+
+.warper__container_text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.contaiter_table {
+    text-align: center;
+    border: 1px solid red;
+}
+
+.table-container {
+    width: 80%;
+    border: 1.5px solid rgb(197, 137, 8);
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.table {
+    width: 90%;
+    text-align: center;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+table th {
+    background-color: #d0d1d4;
+    font-weight: 600;
+}
+
+table td,
+tr,
+th {
+    font-family: 'Arial', sans-serif;
+    font-weight: 300;
+    border-spacing: 1px;
+    border: 1px solid rgb(133, 130, 130);
+}
+
+.modal_content {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    margin-right: 40%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: auto;
+}
+
+.warper__container-modal {
+    width: 20%;
+    height: 18%;
+    margin: auto;
+}
+
+.modal_content button {
+    margin-left: 52%;
+}
+
+.popup__bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s all;
+}
+
+.popup__bg.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 600px;
+    height: 400px;
+    padding: 25px;
+    transition: 0.5s all;
+}
+
+.open-popup {
+    height: 45px;
+    width: 150px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+    border: 2px solid #101011;
+    background: #2982ff;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.open-popup:hover {
+    background: #fff;
+    color: #083b83;
+    transition: 0.5s all;
+}
+
+.popup.active {
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.5s all;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(117, 190, 218, 0.0);
+}
+
+.popup textarea {
+    resize: none;
+    width: 100%;
+    height: 300px;
+    border: 1px solid red;
+    outline: none;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.popup textarea:focus {
+    border-bottom: 1px solid #2982ff;
+}
+
+.popup button {
+    height: 45px;
+    width: 180px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    border: 2px solid #101011;
+    background: #2982ff;
+    cursor: pointer;
+    margin-left: 30%;
+}
+
+.popup button:hover {
+    background: #fff;
+    color: #083b83;
+    transition: 0.5s all;
+}
+
+.deleteRow {
+    margin-bottom: 2px;
+    font-size: 10px;
+    color: #070606;
+    background-color: #e28383;
+    border-radius: 5px;
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.deleteRow:hover,
+.close:focus {
+    background-color: #cf2e2e;
+    color: #fff;
+    cursor: pointer;
+}
+
+.mystyle {
+    position: absolute;
+    margin-left: 5px;
+    background-image: url(../images/up.svg);
+    background-color: rgba(117, 190, 218, 0.0);
+    width: 20px;
+    height: 20px;
+}
+
+.edit-modal {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #fdfdfd;
+}
+
+.btn-save {
+    width: 50px;
+    height: 30px;
+    background-color: red;
+}
+
+.btn-close {
+    width: 50px;
+    height: 30px;
+    background-color: rgb(251, 255, 0);
+}
+
+.active-edit {
+    display: none;
+}
